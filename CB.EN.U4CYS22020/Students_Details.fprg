@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="deepak"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-28 09:38:19 AM"/>
+        <attribute name="created" value="ZGVlcGFrO0RFRVBBS0tVTUFSOzIwMjItMTAtMjg7MDg6NTM6MTcgQU07MjY5OA=="/>
+        <attribute name="edited" value="ZGVlcGFrO0RFRVBBS0tVTUFSOzIwMjItMTAtMjg7MDk6Mzg6MTkgQU07MTsyODEy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="roll, name, add, blood, phno, depart" type="String" array="False" size=""/>
+            <output expression="&quot;Enter your roll number:&quot;" newline="True"/>
+            <input variable="roll"/>
+            <output expression="&quot;Enter your name:&quot;" newline="True"/>
+            <input variable="name"/>
+            <output expression="&quot;Enter your address:&quot;" newline="True"/>
+            <input variable="add"/>
+            <output expression="&quot;Enter your blood group:&quot;" newline="True"/>
+            <input variable="blood"/>
+            <output expression="&quot;Enter your phone number:&quot;" newline="True"/>
+            <input variable="phno"/>
+            <output expression="&quot;Enter the department assigned:&quot;" newline="True"/>
+            <input variable="depart"/>
+        </body>
+    </function>
+</flowgorithm>

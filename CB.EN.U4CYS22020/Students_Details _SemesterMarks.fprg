@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="deepak"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-28 10:14:47 AM"/>
+        <attribute name="created" value="ZGVlcGFrO0RFRVBBS0tVTUFSOzIwMjItMTAtMjg7MDg6NTM6MTcgQU07MjY5OA=="/>
+        <attribute name="edited" value="ZGVlcGFrO0RFRVBBS0tVTUFSOzIwMjItMTAtMjg7MTA6MTQ6NDcgQU07MzsyODAx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="roll, name, add, blood, phno, depart" type="String" array="False" size=""/>
+            <output expression="&quot;Enter your roll number:&quot;" newline="True"/>
+            <input variable="roll"/>
+            <output expression="&quot;Enter your name:&quot;" newline="True"/>
+            <input variable="name"/>
+            <output expression="&quot;Enter your address:&quot;" newline="True"/>
+            <input variable="add"/>
+            <output expression="&quot;Enter your blood group:&quot;" newline="True"/>
+            <input variable="blood"/>
+            <output expression="&quot;Enter your phone number:&quot;" newline="True"/>
+            <input variable="phno"/>
+            <output expression="&quot;Enter the department assigned:&quot;" newline="True"/>
+            <input variable="depart"/>
+            <declare name="Sem, marks, total, marks2, marks3" type="Integer" array="False" size=""/>
+            <declare name="code, code2, code3" type="String" array="False" size=""/>
+            <declare name="avg" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter your current semester:&quot;" newline="True"/>
+            <input variable="sem"/>
+            <output expression="&quot;Enter the subject code:&quot;" newline="True"/>
+            <input variable="code"/>
+            <output expression="&quot;Enter the marks obtained:&quot;" newline="True"/>
+            <input variable="marks"/>
+            <output expression="&quot;Enter the subject code:&quot;" newline="True"/>
+            <input variable="code2"/>
+            <output expression="&quot;Enter the marks obtained:&quot;" newline="True"/>
+            <input variable="marks2"/>
+            <output expression="&quot;Enter the subject code:&quot;" newline="True"/>
+            <input variable="code3"/>
+            <output expression="&quot;Enter the marks obatined:&quot;" newline="True"/>
+            <input variable="marks3"/>
+            <output expression="&quot;Roll no:&quot;&amp;roll" newline="True"/>
+            <assign variable="total" expression="marks+marks2+marks3"/>
+            <output expression="&quot;The total marks obtained is&quot;&amp;total" newline="True"/>
+            <assign variable="avg" expression="total/3"/>
+            <output expression="&quot;The average marks obtained is&quot;&amp;avg" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
