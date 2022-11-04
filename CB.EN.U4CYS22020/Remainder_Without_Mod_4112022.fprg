@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22020"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:40:58 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjAyMDsyMDIyMjNNQVlDMDA1NzsyMDIyLTExLTA0OzEwOjE2OjE4IEFNOzMzMDk="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjAyMDsyMDIyMjNNQVlDMDA1NzsyMDIyLTExLTA0OzEwOjQwOjU4IEFNOzQ7MzQyMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="The Aim is the find the remainder of the operation without mod operator"/>
+            <comment text="For this user must know about basics of division"/>
+            <declare name="Divisor, Divident, Quotient, Remainder" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the value for Divident:&quot;" newline="True"/>
+            <input variable="Divident"/>
+            <output expression="&quot;Enter the value for Divisor:&quot;" newline="True"/>
+            <input variable="Divisor"/>
+            <comment text="Here first quotient is found through which we find the remainder by the following formulas"/>
+            <assign variable="Quotient" expression="Divident/Divisor"/>
+            <assign variable="Remainder" expression="Divident-(Divisor*Quotient)"/>
+            <output expression="&quot;The Remainder is:&quot;&amp;Remainder" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

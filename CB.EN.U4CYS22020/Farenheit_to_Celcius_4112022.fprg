@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22020"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:37:35 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjAyMDsyMDIyMjNNQVlDMDA1NzsyMDIyLTExLTA0OzA5OjIzOjAyIEFNOzMzMDg="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjAyMDsyMDIyMjNNQVlDMDA1NzsyMDIyLTExLTA0OzEwOjM3OjM1IEFNOzI7MzQyMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Aim is to find the temperaure given in farenheit to Celcius of the respective temperature"/>
+            <declare name="Celcius, Farenheit" type="Real" array="False" size=""/>
+            <output expression="&quot;FARENHEIT TO CELCIUS CONVERTER:&quot;" newline="True"/>
+            <output expression="&quot;Enter the temperature in Farenheit:&quot;" newline="True"/>
+            <input variable="Farenheit"/>
+            <comment text="Here the formula is used"/>
+            <assign variable="Celcius" expression="(Farenheit-32)*5/9"/>
+            <output expression="&quot;The temperature in Celcius is:&quot;&amp;Celcius" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
