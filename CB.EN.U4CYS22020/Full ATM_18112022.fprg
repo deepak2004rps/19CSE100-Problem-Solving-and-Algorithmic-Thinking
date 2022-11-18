@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22020"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-18 10:54:02 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAyMDsyMDIyMjNNQVlDMDA1NzsyMDIyLTExLTE4OzA5OjUzOjA5IEFNOzMwNjc="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAyMDsyMDIyMjNNQVlDMDA1NzsyMDIyLTExLTE4OzEwOjExOjM5IEFNOzE7Q0IuRU4uVTRDWVMyMjAyMDsyMDIyMjNNQVlDMDA1NzsyMDIyLTExLTE4OzA4OjU5OjU1IEFNO0FUTV9NYWNoaW5lXzE4MTEyMDIyLmZwcmc7ODM0Mg=="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAyMDsyMDIyMjNNQVlDMDA1NzsyMDIyLTExLTE4OzEwOjU0OjAyIEFNOzQ7MzE2NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="accno, pin1, cash, pin2, bank, balance, limit, newpin, confirmpin, pin" type="Integer" array="False" size=""/>
+            <declare name="bill" type="String" array="False" size=""/>
+            <output expression="&quot;Welcome to SBI ATM !&quot;" newline="True"/>
+            <output expression="&quot;Please enter your account number:&quot;" newline="True"/>
+            <input variable="accno"/>
+            <output expression="&quot;Please enter your bank balance:&quot;" newline="True"/>
+            <input variable="balance"/>
+            <output expression="&quot;Please select a valid application:&quot;" newline="True"/>
+            <output expression="&quot;1) Quick cash withdrawal&quot;" newline="True"/>
+            <output expression="&quot;2) Deposit&quot;" newline="True"/>
+            <output expression="&quot;3) Bank balance&quot;" newline="True"/>
+            <output expression="&quot;4) Pin reset&quot;" newline="True"/>
+            <input variable="bank"/>
+            <if expression="bank==1">
+                <then>
+                    <output expression="&quot;Please enter your pin:&quot;" newline="True"/>
+                    <input variable="pin1"/>
+                    <comment text="checking balance"/>
+                    <if expression="balance&lt;500">
+                        <then>
+                            <output expression="&quot;Sorry you don't have enough balance in your account&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Please enter the amount required:&quot;" newline="True"/>
+                            <input variable="cash"/>
+                            <if expression="cash&lt;=balance">
+                                <then/>
+                                <else>
+                                    <output expression="&quot;Sorry you have insufficient balance, Please try again later&quot;" newline="True"/>
+                                    <breakpoint expression="" always="True"/>
+                                </else>
+                            </if>
+                            <comment text="Checking limit"/>
+                            <if expression="cash&gt;50000">
+                                <then>
+                                    <output expression="&quot;Your maximum limit of amount has been reacheed.!&quot;" newline="True"/>
+                                    <output expression="&quot;For now only 50,000 INR can be withdrawn, Would you like to withdraw(y/n)?&quot;" newline="True"/>
+                                    <input variable="limit"/>
+                                    <if expression="limit==&quot;y&quot;">
+                                        <then/>
+                                        <else>
+                                            <output expression="&quot;Thank you for using the ATM.!&quot;" newline="True"/>
+                                            <breakpoint expression="" always="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else/>
+                            </if>
+                            <output expression="&quot;Please re-enter your pin:&quot;" newline="True"/>
+                            <input variable="pin2"/>
+                            <if expression="pin1==pin2">
+                                <then>
+                                    <output expression="&quot;Your request is beng processed&quot;" newline="True"/>
+                                    <output expression="&quot;Do you need the bill?(y/n)&quot;" newline="True"/>
+                                    <input variable="bill"/>
+                                    <if expression="bill==&quot;y&quot;">
+                                        <then>
+                                            <output expression="&quot;Your bill being processed&quot;" newline="True"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Invalid pin&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                    <output expression="&quot;Thanks for using the ATM ... Have a nice day !&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="bank==2">
+                        <then>
+                            <output expression="&quot;Please enter the 11 digit account number:&quot;" newline="True"/>
+                            <input variable="balance"/>
+                            <output expression="&quot;Please enter account holder name:&quot;" newline="True"/>
+                            <input variable="name"/>
+                            <output expression="&quot;Please enter the amount to be deposited and insert the cash&quot;" newline="True"/>
+                            <input variable="cash1"/>
+                            <output expression="&quot;Your request is being processed&quot;" newline="True"/>
+                            <output expression="&quot;Do you need the bill?(y/n)&quot;" newline="True"/>
+                            <input variable="bill"/>
+                            <if expression="bill==&quot;y&quot;">
+                                <then>
+                                    <output expression="&quot;Your bill being processed&quot;" newline="True"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="bank==3">
+                                <then>
+                                    <output expression="&quot;Your bank balance is&quot;&amp;balance" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="bank==4">
+                                        <then>
+                                            <output expression="&quot;Enter your 4 digit pin&quot;" newline="True"/>
+                                            <input variable="pin"/>
+                                            <output expression="&quot;OTP has been sent to your registered mobile number:&quot;" newline="True"/>
+                                            <output expression="&quot;Enter the 6 digit OTP&quot;" newline="True"/>
+                                            <input variable="otp"/>
+                                            <output expression="&quot;Enter your new pin:&quot;" newline="True"/>
+                                            <input variable="newpin"/>
+                                            <output expression="&quot;Confirm your pin&quot;" newline="True"/>
+                                            <input variable="confirmpin"/>
+                                            <if expression="newpin==confirmpin">
+                                                <then>
+                                                    <output expression="&quot;Your pin has been succesfully changed&quot;" newline="True"/>
+                                                </then>
+                                                <else/>
+                                            </if>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
