@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22020"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 09:37:29 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjAyMDsyMDIyMjNNQVlDMDA1NzsyMDIyLTEyLTAyOzA5OjI2OjMxIEFNOzMzMTI="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjAyMDsyMDIyMjNNQVlDMDA1NzsyMDIyLTEyLTAyOzA5OjM3OjI5IEFNOzI7MzQzMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Sum, Number, data, i, Factorial" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please enter the number to get its factorial:&quot;" newline="True"/>
+            <assign variable="Number" expression="1"/>
+            <assign variable="Factorial" expression="1"/>
+            <input variable="data"/>
+            <while expression="Number&lt;=data">
+                <assign variable="Factorial" expression="Factorial*Number"/>
+                <assign variable="Number" expression="Number+1"/>
+            </while>
+            <output expression="Factorial" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

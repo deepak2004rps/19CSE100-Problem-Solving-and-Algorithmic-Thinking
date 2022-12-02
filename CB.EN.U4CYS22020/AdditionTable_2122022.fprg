@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22020"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 10:07:29 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjAyMDsyMDIyMjNNQVlDMDA1NzsyMDIyLTEyLTAyOzEwOjA2OjIyIEFNOzMzMDI="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjAyMDsyMDIyMjNNQVlDMDA1NzsyMDIyLTEyLTAyOzEwOjA2OjI0IEFNOzE7Y2IuZW4udTRjeXMyMjAyMDsyMDIyMjNNQVlDMDA1NzsyMDIyLTEyLTAyOzA5OjM3OjMxIEFNO011bHRpcGxpY2F0aW9uVGFibGVfMjEyMjAyMi5mcHJnOzk3Mzc="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjAyMDsyMDIyMjNNQVlDMDA1NzsyMDIyLTEyLTAyOzEwOjA3OjI5IEFNOzE7MzQxOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Addition table from 1 to 10"/>
+            <declare name="i, j" type="Integer" array="False" size=""/>
+            <for variable="i" start="1" end="10" direction="inc" step="1">
+                <output expression="&quot;The addition table of &quot;&amp;i&amp;&quot; is:&quot;" newline="True"/>
+                <for variable="j" start="1" end="10" direction="inc" step="1">
+                    <output expression="i&amp;&quot;+&quot;&amp;j&amp;&quot;=&quot;&amp;i+j" newline="True"/>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
