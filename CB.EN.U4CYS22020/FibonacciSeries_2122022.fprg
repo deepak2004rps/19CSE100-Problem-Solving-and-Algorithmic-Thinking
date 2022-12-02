@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22020"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 10:44:41 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjAyMDsyMDIyMjNNQVlDMDA1NzsyMDIyLTEyLTAyOzEwOjA3OjM1IEFNOzMzMDc="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjAyMDsyMDIyMjNNQVlDMDA1NzsyMDIyLTEyLTAyOzEwOjQ0OjQxIEFNOzE7MzQxMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Finding the fibonacci series for the number of elements that the user gives"/>
+            <declare name="n1, n2, i, n3, n" type="Integer" array="False" size=""/>
+            <assign variable="n2" expression="0"/>
+            <assign variable="i" expression="1"/>
+            <assign variable="n3" expression="1"/>
+            <while expression="i&lt;=n">
+                <output expression="n3" newline="True"/>
+                <comment text="Using mathematical operations to bring out fibonacci series&#13;&#10;"/>
+                <assign variable="n1" expression="n2"/>
+                <assign variable="n2" expression="n3"/>
+                <assign variable="n3" expression="n2+n1"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
