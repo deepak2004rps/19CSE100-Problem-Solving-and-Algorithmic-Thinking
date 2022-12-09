@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="deepak"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 10:53:32 AM"/>
+        <attribute name="created" value="ZGVlcGFrO0RFRVBBS0tVTUFSOzIwMjItMTItMDk7MDk6NTQ6NTQgQU07MjcwMg=="/>
+        <attribute name="edited" value="ZGVlcGFrO0RFRVBBS0tVTUFSOzIwMjItMTItMDk7MDk6NTY6MDggQU07MTtkZWVwYWs7REVFUEFLS1VNQVI7MjAyMi0xMi0wODsxMTo1MTo0OSBQTTtBcnJheS5mcHJnOzY2Mjc="/>
+        <attribute name="edited" value="ZGVlcGFrO0RFRVBBS0tVTUFSOzIwMjItMTItMDk7MTA6NTM6MzIgQU07MjsyNzk4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x" type="Real" array="True" size="5"/>
+            <declare name="y, z, v" type="Integer" array="False" size=""/>
+            <for variable="y" start="0" end="4" direction="inc" step="1">
+                <output expression="&quot;Enter the number in index &quot;&amp;y&amp;&quot; :&quot;" newline="True"/>
+                <input variable="z"/>
+                <assign variable="x[y]" expression="z"/>
+            </for>
+            <assign variable="v" expression="0"/>
+            <for variable="y" start="0" end="4" direction="inc" step="1">
+                <if expression="v&lt;x[y]">
+                    <then>
+                        <assign variable="v" expression="x[y]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="v" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

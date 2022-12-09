@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="deepak"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 09:25:58 AM"/>
+        <attribute name="created" value="ZGVlcGFrO0RFRVBBS0tVTUFSOzIwMjItMTItMDg7MTE6NTE6NDkgUE07MjcxMA=="/>
+        <attribute name="edited" value="ZGVlcGFrO0RFRVBBS0tVTUFSOzIwMjItMTItMDk7MDk6MjU6NTggQU07MjsyODEz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x" type="Real" array="True" size="10"/>
+            <declare name="y, z" type="Integer" array="False" size=""/>
+            <for variable="y" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;Enter the number in index &quot;&amp;y&amp;&quot; :&quot;" newline="True"/>
+                <input variable="z"/>
+                <assign variable="x[y]" expression="z"/>
+            </for>
+            <for variable="y" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;The element in index &quot;&amp;y&amp;&quot; is &quot;&amp;x[y]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
