@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="deepak"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-18 05:02:29 PM"/>
+        <attribute name="created" value="ZGVlcGFrO0RFRVBBS0tVTUFSOzIwMjMtMDEtMTg7MDk6NTQ6NTEgQU07MjY5OA=="/>
+        <attribute name="edited" value="ZGVlcGFrO0RFRVBBS0tVTUFSOzIwMjMtMDEtMTg7MDQ6NTg6MjEgUE07Mjthc2hvaztBTUFMUklURVNTSDsyMDIzLTAxLTA2OzA5OjU3OjI5IFBNO3E1LmZwcmc7NjIzMg=="/>
+        <attribute name="edited" value="ZGVlcGFrO0RFRVBBS0tVTUFSOzIwMjMtMDEtMTg7MDU6MDI6MjkgUE07NDsyODE4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number fibonic series: &quot;" newline="True"/>
+            <input variable="n"/>
+            <call expression="fibo(n)"/>
+        </body>
+    </function>
+    <function name="fibo" type="None" variable="">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i, a, b, c" type="Integer" array="False" size=""/>
+            <assign variable="a" expression="0"/>
+            <assign variable="b" expression="1"/>
+            <assign variable="c" expression="0"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <assign variable="c" expression="a+b"/>
+                <output expression="a &amp;&quot; + &quot;&amp;b&amp;&quot; = &quot;&amp;c" newline="True"/>
+                <assign variable="a" expression="b"/>
+                <assign variable="b" expression="c"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

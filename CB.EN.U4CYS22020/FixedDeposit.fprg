@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="deepak"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-18 09:52:18 AM"/>
+        <attribute name="created" value="ZGVlcGFrO0RFRVBBS0tVTUFSOzIwMjMtMDEtMTg7MDk6Mzk6NDUgQU07MjcwNA=="/>
+        <attribute name="edited" value="ZGVlcGFrO0RFRVBBS0tVTUFSOzIwMjMtMDEtMTg7MDk6Mzk6NTEgQU07MTt1c2VyO1JBQVM7MjAyMy0wMS0wNjswNTo1OTo0MCBQTTtGRC5mcHJnOzU1NjU="/>
+        <attribute name="edited" value="ZGVlcGFrO0RFRVBBS0tVTUFSOzIwMjMtMDEtMTg7MDk6NTI6MTggQU07MTsyODA3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="principle, final" type="Real" array="False" size=""/>
+            <declare name="tenure, yrs, i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the amount to be deposited:&quot;" newline="True"/>
+            <input variable="principle"/>
+            <output expression="&quot;Enter tenure of deposition (in years).&quot;" newline="True"/>
+            <input variable="tenure"/>
+            <declare name="rate" type="Real" array="True" size="tenure"/>
+            <for variable="i" start="0" end="tenure-1" direction="inc" step="1">
+                <if expression="i == 0">
+                    <then>
+                        <assign variable="rate[i]" expression="3.00"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="i == 1">
+                    <then>
+                        <assign variable="rate[i]" expression="4.00"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="i == 2">
+                    <then>
+                        <assign variable="rate[i]" expression="5.00"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="i == 3">
+                    <then>
+                        <assign variable="rate[i]" expression="5.50"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="i&gt;= 4">
+                    <then>
+                        <assign variable="rate[i]" expression="6.00"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <while expression="tenure&lt;1 &amp;&amp; tenure &gt;25">
+                <if expression="tenure&lt;1">
+                    <then>
+                        <output expression="&quot;Tenure should be 1 or more than 1 year. Please enter valid tenure.&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;Tenure can't be greater than 25 years. Please enter valid tenure.&quot;" newline="True"/>
+                    </else>
+                </if>
+                <input variable="tenure"/>
+            </while>
+            <if expression="1&lt;=tenure">
+                <then>
+                    <assign variable="principle" expression="principle*rate[tenure-1]/100+principle"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="2&lt;=tenure">
+                <then>
+                    <assign variable="principle" expression="principle*rate[tenure-1]/100+principle"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="3&lt;=tenure">
+                <then>
+                    <assign variable="principle" expression="principle*rate[tenure-1]/100+principle"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="4&lt;=tenure">
+                <then>
+                    <assign variable="principle" expression="principle*rate[tenure-1]/100+principle"/>
+                </then>
+                <else/>
+            </if>
+            <for variable="yrs" start="5" end="tenure" direction="inc" step="1">
+                <assign variable="principle" expression="principle*rate[tenure-1]/100+principle"/>
+            </for>
+            <output expression="&quot;The value of the fixed deposit after &quot; &amp;tenure&amp; &quot; years will be &quot;&amp;ToFixed(principle,2)" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

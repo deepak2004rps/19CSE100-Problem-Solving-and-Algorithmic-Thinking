@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="deepak"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-18 05:14:59 PM"/>
+        <attribute name="created" value="ZGVlcGFrO0RFRVBBS0tVTUFSOzIwMjMtMDEtMTg7MDk6NTM6MzUgQU07MjY5OQ=="/>
+        <attribute name="edited" value="ZGVlcGFrO0RFRVBBS0tVTUFSOzIwMjMtMDEtMTg7MDU6MDg6MTAgUE07Mjthc2hvaztBTUFMUklURVNTSDsyMDIzLTAxLTA2OzEwOjE1OjQ5IFBNO3E0LmZwcmc7NjIxMw=="/>
+        <attribute name="edited" value="ZGVlcGFrO0RFRVBBS0tVTUFSOzIwMjMtMDEtMTg7MDU6MTQ6NTkgUE07MjsyODIy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number to find the factorial: &quot;" newline="True"/>
+            <input variable="n"/>
+            <call expression="fact(n)"/>
+        </body>
+    </function>
+    <function name="fact" type="None" variable="">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i, a" type="Integer" array="False" size=""/>
+            <assign variable="a" expression="1"/>
+            <if expression="n &gt; 0 or n=0">
+                <then>
+                    <for variable="i" start="1" end="n" direction="inc" step="1">
+                        <assign variable="a" expression="a*i"/>
+                    </for>
+                    <output expression="a" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Negative numbers are nit defined/invalid&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
