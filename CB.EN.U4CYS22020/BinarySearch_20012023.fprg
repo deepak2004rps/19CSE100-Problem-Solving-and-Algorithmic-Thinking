@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22020"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-20 10:58:01 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjAyMDsyMDIyMjNNQVlDMDA1NzsyMDIzLTAxLTIwOzEwOjI5OjA3IEFNOzMzMDk="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjAyMDsyMDIyMjNNQVlDMDA1NzsyMDIzLTAxLTIwOzEwOjU4OjAxIEFNOzM7MzQxNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, d, t, r, m, n" type="Integer" array="False" size=""/>
+            <declare name="a" type="Integer" array="True" size="5"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <output expression="&quot;Enter the elements in the array:&quot;" newline="True"/>
+                <input variable="a[i]"/>
+            </for>
+            <output expression="&quot;Enter the element to be searched:&quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="d" expression="0"/>
+            <assign variable="t" expression="4"/>
+            <assign variable="r" expression="-1"/>
+            <while expression="d&lt;=t">
+                <assign variable="m" expression="(d+t)/2"/>
+                <if expression="a[m]&lt;=n">
+                    <then>
+                        <assign variable="d" expression="m+1"/>
+                        <if expression="a[m]=n">
+                            <then>
+                                <assign variable="r" expression="m"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </then>
+                    <else>
+                        <assign variable="t" expression="m-1"/>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;The element is in the index&quot;&amp; r" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
